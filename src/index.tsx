@@ -24,6 +24,7 @@ import {
   Link,
 } from "react-router-dom";
 import Root from './routes/root';
+import ErrorPage from './error-page';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
   {
     path: "about",
     element: <div>About Foo</div>,
+    errorElement: <ErrorPage/>
   },
 ]);
 
