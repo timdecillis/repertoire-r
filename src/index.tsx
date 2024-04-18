@@ -23,11 +23,12 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import Root from './routes/root';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <Root/>,
   },
   {
     path: "about",
