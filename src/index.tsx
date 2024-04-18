@@ -30,11 +30,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root/>,
+    errorElement: <ErrorPage/>
   },
   {
     path: "about",
-    element: <div>About Foo</div>,
-    errorElement: <ErrorPage/>
+    element: <div>About Foo</div>
   },
 ]);
 

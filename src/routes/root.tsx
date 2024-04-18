@@ -6,7 +6,7 @@ export default function Root() {
         <nav>
           <ul>
             <li>
-              <a href={'/about'}>About</a>
+              <a href={'/contacts/1'}>About</a>
             </li>
             <li>
               <a href={`/contacts/2`}>Your Friend</a>
