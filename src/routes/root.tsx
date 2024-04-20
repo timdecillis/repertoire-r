@@ -9,7 +9,7 @@ export default function Root() {
               <a href={'/about'}>About</a>
             </li>
             <li>
-              <a href={`/contacts/2`}>Your Friend</a>
+              <a href={`/contacts/5`}>Your Friend</a>
             </li>
           </ul>
         </nav>
