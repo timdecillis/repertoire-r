@@ -20,6 +20,10 @@ const router = createBrowserRouter([
     path: "about",
     element: <div>About Foo</div>
   },
+  {
+    path: "contacts/:contactId",
+    element: <Contact/>
+  },
 ]);
 
 createRoot(document.getElementById("root")!).render(
