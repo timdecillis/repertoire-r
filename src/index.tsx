@@ -1,14 +1,9 @@
 import * as React from "react";
 import { createRoot } from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
-import Root, { loader as rootLoader } from './routes/root';
-import Contact from './routes/contact';
-import ErrorPage from './error-page';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Root, { loader as rootLoader } from "./routes/root";
+import Contact from "./routes/contact";
+import ErrorPage from "./error-page";
 
 const router = createBrowserRouter([
   {
