@@ -7,7 +7,7 @@ export async function loader() {
 }
 
 export default function Root() {
-  const { contacts } = useLoaderData();
+  const { contacts } = useLoaderData() as { contacts: any };
   return (
     <>
       <div id="sidebar">
@@ -31,7 +31,7 @@ export default function Root() {
         <nav>
           {contacts.length ? (
             <ul>
-              {contacts.map((contact:any) => (
+              {contacts.map((contact: any) => (
                 <li key={contact.id}>
                   <Link to={`contacts/${contact.id}`}>
                     {contact.first || contact.last ? (
