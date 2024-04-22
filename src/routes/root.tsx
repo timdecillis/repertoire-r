@@ -44,7 +44,7 @@ export default function Root() {
                         {contact.first} {contact.last}
                       </>
                     ) : (
-                      <i>No Name</i>
+                      <i>***</i>
                     )}{" "}
                     {contact.favorite && <span>★</span>}
                   </Link>
