@@ -7,6 +7,7 @@ import Root, {
 } from "./routes/root";
 import Contact, { loader as contactLoader } from "./routes/contact";
 import ErrorPage from "./error-page";
+import EditContact from "./routes/edit";
 
 const router = createBrowserRouter([
   {
