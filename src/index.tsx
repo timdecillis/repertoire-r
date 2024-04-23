@@ -8,6 +8,7 @@ import Root, {
 import Contact, { loader as contactLoader } from "./routes/contact";
 import ErrorPage from "./error-page";
 import EditContact from "./routes/edit";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
