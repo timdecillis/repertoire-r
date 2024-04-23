@@ -1,7 +1,7 @@
 import { Form, useLoaderData, redirect } from "react-router-dom";
 import { updateContact } from "../contacts";
 
-export async function action({ request, params }) {
+export async function action({ request, params }: any) {
   const formData = await request.formData();
   const updates = Object.fromEntries(formData);
   await updateContact(params.contactId, updates);
@@ -51,11 +51,7 @@ export default function EditContact() {
       </label>
       <label>
         <span>Notes</span>
-        <textarea
-          name="notes"
-          defaultValue={contact?.notes}
-          rows={6}
-        />
+        <textarea name="notes" defaultValue={contact?.notes} rows={6} />
       </label>
       <p>
         <button type="submit">Save</button>
