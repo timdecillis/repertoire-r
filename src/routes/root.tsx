@@ -48,14 +48,17 @@ export default function Root() {
                   <NavLink
                     to={`contacts/${contact.id}`}
                     className={({ isActive, isPending }) =>
-                      isActive
-                        ? "active"
-                        : isPending
-                        ? "pending"
-                        : ""
+                      isActive ? "active" : isPending ? "pending" : ""
                     }
                   >
-                    {/* other code */}
+                    {contact.first || contact.last ? (
+                      <>
+                        {contact.first} {contact.last}
+                      </>
+                    ) : (
+                      <i>***</i>
+                    )}{" "}
+                    {contact.favorite && <span>★</span>}
                   </NavLink>
                 </li>
               ))}
