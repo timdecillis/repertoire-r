@@ -57,7 +57,7 @@ export default function Root() {
                 submit(event.currentTarget.form);
               }}
             />
-            <div id="search-spinner" aria-hidden hidden={true} />
+            <div id="search-spinner" aria-hidden hidden={!searching} />
             <div className="sr-only" aria-live="polite"></div>
           </Form>
           <Form method="post">
