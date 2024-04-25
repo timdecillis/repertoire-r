@@ -8,6 +8,7 @@ import {
   useNavigation,
 } from "react-router-dom";
 import { getContacts, createContact } from "../contacts";
+import { useEffect } from "react";
 
 export async function action() {
   const contact = await createContact();
@@ -24,6 +25,11 @@ export async function loader({ request }: any) {
 export default function Root() {
   const { contacts, q } = useLoaderData() as { contacts: any, q: any };
   const navigation = useNavigation();
+
+  useEffect(() => {
+    document.getElementById("q")?.setAttribute("value", "");
+  }, [q])
+
   return (
     <>
       <div id="sidebar">
