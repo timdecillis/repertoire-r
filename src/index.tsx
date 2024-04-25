@@ -31,7 +31,7 @@ const router = createBrowserRouter([
         action: editAction,
       },
       {
-        path: "/destroy",
+        path: "contacts/:contactId/destroy",
         action: destroyAction,
       },
     ],

@@ -5,9 +5,3 @@ export const action = async ({ request, params }: any) => {
   await deleteContact(params.contactId)
   return redirect("/");
 }
-
-export default function Destroy() {
-  return (
-    <div>destroyed</div>
-  )
-}
