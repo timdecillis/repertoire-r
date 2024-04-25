@@ -17,7 +17,7 @@ export async function action() {
 
 export async function loader({ request }: any) {
   const url = new URL(request.url);
-  const q = url.searchParams.get("q");
+  const q = url.searchParams.get("q") || "";
   const contacts = await getContacts(q);
   return { contacts, q };
 }
@@ -27,7 +27,10 @@ export default function Root() {
   const navigation = useNavigation();
 
   useEffect(() => {
-    document.getElementById("q")?.setAttribute("value", "");
+    const element = document.getElementById("q");
+    if (element) {
+      (element as HTMLInputElement).value = q;
+    }
   }, [q])
 
   return (
