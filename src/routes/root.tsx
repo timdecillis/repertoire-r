@@ -22,7 +22,7 @@ export async function loader({ request }: any) {
 }
 
 export default function Root() {
-  const { contacts } = useLoaderData() as { contacts: any };
+  const { contacts, q } = useLoaderData() as { contacts: any, q: any };
   const navigation = useNavigation();
   return (
     <>
