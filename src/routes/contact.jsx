@@ -1,9 +1,16 @@
 import { Form, useFetcher, useLoaderData } from "react-router-dom";
-import { getContact } from "../contacts";
+import { getContact, updateContact } from "../contacts";
 
 export async function loader({ params }) {
   const contact = await getContact(params.contactId);
   return { contact };
+}
+
+export async function action({ request, params }: any) {
+  let formData = await request.formData();
+  return updateContact(params.contactId, {
+    favorite: formData.get("favorite") === "true",
+  });
 }
 
 export default function Contact() {
@@ -45,12 +52,18 @@ export default function Contact() {
             method="post"
             action="destroy"
             onSubmit={(event) => {
-              if (!window.confirm("Please confirm you want to delete this record.")) {
+              if (
+                !window.confirm(
+                  "Please confirm you want to delete this record."
+                )
+              ) {
                 event.preventDefault();
               }
             }}
           >
-            <button type="submit"name="delete">Delete</button>
+            <button type="submit" name="delete">
+              Delete
+            </button>
           </Form>
         </div>
       </div>
