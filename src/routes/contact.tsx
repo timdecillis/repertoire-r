@@ -1,7 +1,7 @@
 import { Form, useFetcher, useLoaderData } from "react-router-dom";
 import { getContact, updateContact } from "../contacts";
 
-export async function loader({ params }) {
+export async function loader({ params }: any) {
   const contact = await getContact(params.contactId);
   if (!contact) {
     throw new Response("", {
@@ -20,7 +20,7 @@ export async function action({ request, params }: any) {
 }
 
 export default function Contact() {
-  const { contact } = useLoaderData();
+  const { contact } : any = useLoaderData();
 
   return (
     <div id="contact">
@@ -77,7 +77,7 @@ export default function Contact() {
   );
 }
 
-function Favorite({ contact }) {
+function Favorite({ contact }: any) {
   const fetcher = useFetcher();
   let favorite = contact.favorite;
   if (fetcher.formData) {
