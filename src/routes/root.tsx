@@ -40,7 +40,7 @@ export default function Root() {
 
   return (
     <>
-      <div id="sidebar">
+      {/* <div id="sidebar">
         <h1>Your Contacts</h1>
         <div>
           <Form id="search-form" role="search">
@@ -94,7 +94,8 @@ export default function Root() {
             </p>
           )}
         </nav>
-      </div>
+      </div> */}
+      <div id="sidebar">Repertoire</div>
       <div
         id="detail"
         className={navigation.state === "loading" ? "loading" : ""}
