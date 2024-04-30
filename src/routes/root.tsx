@@ -95,7 +95,9 @@ export default function Root() {
           )}
         </nav>
       </div> */}
-      <div id="sidebar">Repertoire</div>
+      <div id="sidebar">
+        <h1>Repertoire</h1>
+      </div>
       <div
         id="detail"
         className={navigation.state === "loading" ? "loading" : ""}
