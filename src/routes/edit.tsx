@@ -63,7 +63,7 @@ export default function EditContact() {
             navigate(-1);
           }}
         >
-          Cancel
+          Go Back
         </button>
       </p>
     </Form>
