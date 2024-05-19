@@ -1,3 +1,3 @@
-from server import server
+import server
 
-server()
+server.run()
