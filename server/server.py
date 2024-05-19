@@ -1,6 +1,6 @@
 from Flask import Flask
 app = Flask(__rep_server__)
 
-
-
-print('hello, world')
+@app.route('/')
+def hello():
+  return 'hello, world'
