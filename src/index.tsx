@@ -13,7 +13,7 @@ import ErrorPage from "./error-page";
 import EditContact, { action as editAction } from "./routes/edit";
 import "./index.css";
 import { action as destroyAction } from "./routes/destroy";
-import Index from "./routes";
+import Index from "./routes"
 
 const router = createBrowserRouter([
   {
